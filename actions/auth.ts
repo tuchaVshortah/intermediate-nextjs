@@ -10,7 +10,7 @@ const authSchema = z.object({
   password: z.string(),
 })
 
-const registerUser = async (prevState: any, formData: FormData) => {
+export const registerUser = async (prevState: any, formData: FormData) => {
   const data = authSchema.parse({
     email: formData.get('email'),
     password: formData.get('password'),
